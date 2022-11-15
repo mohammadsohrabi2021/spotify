@@ -1,10 +1,11 @@
 import { Grid } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
-import image from '../image/1.png'
+
 const Cart = ({image1,title}) => {
     return (
-        <Grid>
-            <img src={image} alt='logo'/>
+        <Grid display={'flex'} gap={2} boxShadow={5} p={2} alignItems={'center'}>
+              <Image src={image1} width={70} height={60}/>
             <p>{title}</p>
         </Grid>
     );

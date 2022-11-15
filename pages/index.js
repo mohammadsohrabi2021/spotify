@@ -12,38 +12,44 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import Typography from '@mui/material/Typography';
-import AddBoxIcon from '@mui/icons-material/AddBox';
 import AddIcon from '@mui/icons-material/Add';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import image1 from '../image/1.png'
+import image2 from '../image/2.png'
+import image3 from '../image/Rectangle 5.png'
+import image4 from '../image/3.png'
+import image5 from '../image/1.png'
+import image6 from '../image/5.png'
 import Cart from '../Component/Cart';
 export default function Home() {
   return (
-   
+
     <Grid>
-       <Grid className={styles.container}>
+      <Grid className={styles.container}>
         <Grid className={styles.leftSide}>
-            {/* <Sidebar/> */}
+          {/* <Sidebar/> */}
         </Grid>
         <Grid ml={5} className={styles.rightSide}>
-            <Grid  className={styles.rightSide_TopBox}>
-               <h2>
-                   {"Good afternoon"}
-               </h2>
-                <Grid className={styles.rightSide_TopBox__cart}>
-                  <Cart image1={image1} title={'Pop Right Now'}/>
-               
-                </Grid>
-                <Grid className={styles.rightSide_TopBox__cart}>
-                    <p>Pop Right Now</p>
-                    <p>Pop Right Now</p>
-                    <p>Pop Right Now</p>
-                    <p>Pop Right Now</p>
-                </Grid>
+          <Grid className={styles.rightSide_TopBox}>
+            <h2>
+              {"Good afternoon"}
+            </h2>
+            <Grid className={styles.rightSide_TopBox__cart}>
+              <Cart image1={image1} title={'Pop Right Now'} />
+              <Cart image1={image2} title={'Pop Right Now'} />
+              <Cart image1={image3} title={'Pop Right Now'} />
+
+
             </Grid>
+            <Grid className={styles.rightSide_TopBox__cart}>
+              <Cart image1={image4} title={'Pop Right Now'} />
+              <Cart image1={image5} title={'Pop Right Now'} />
+              <Cart image1={image6} title={'Pop Right Now'} />
+            </Grid>
+          </Grid>
         </Grid>
-    </Grid>
-     
+      </Grid>
+
       <Drawer variant="permanent" PaperProps={{ sx: { width: "18%", backgroundColor: '#000' }, }}>
         <Box sx={{ backgroundColor: '#000', padding: '22px 0 10px 22px' }}>
           <Image
