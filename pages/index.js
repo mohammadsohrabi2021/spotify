@@ -2,21 +2,15 @@
 import styles from '../styles/Home.module.css'
 
 import Grid from '@mui/material/Grid';
-import image1 from '../image/1.png'
-import image2 from '../image/2.png'
-import image3 from '../image/Rectangle 5.png'
-import image4 from '../image/3.png'
-import image5 from '../image/1.png'
-import image6 from '../image/5.png'
-import img1 from '../image/Rectangle.png'
-import img2 from '../image/Rectangle1.png'
 import Cart from '../Component/Cart';
 import Sidebar from '../Component/Sidebar';
 import CartShop from '../Component/CartShop';
+import data from '../Data/data';
+import dataMain from '../Data/dataMain';
 export default function Home() {
   return (
 
-    <Grid >
+    <Grid ml={10}>
       <Grid className={styles.container}>
         <Grid ml={25} className={styles.rightSide}>
           <Grid className={styles.rightSide_TopBox}>
@@ -24,16 +18,10 @@ export default function Home() {
               {"Good afternoon"}
             </h2>
             <Grid className={styles.rightSide_TopBox__cart}>
-              <Cart image1={image1} title={'Pop Right Now'} />
-              <Cart image1={image2} title={'Pop Right Now'} />
-              <Cart image1={image3} title={'Pop Right Now'} />
+              {
+                data.map(item => <Cart image1={item.image} title={item.title} />)
+              }
 
-
-            </Grid>
-            <Grid className={styles.rightSide_TopBox__cart}>
-              <Cart image1={image4} title={'Pop Right Now'} />
-              <Cart image1={image5} title={'Pop Right Now'} />
-              <Cart image1={image6} title={'Pop Right Now'} />
             </Grid>
           </Grid>
           <Grid>
@@ -43,14 +31,9 @@ export default function Home() {
               </h2>
             </Grid>
             <Grid className={styles.rightSide_TopBox__cart}>
-              <CartShop image={img1} title={'Hot Hits USA'} dis={'The hottest tracks in the United States'} />
-              <CartShop image={img2} title={'Hot Hits USA'} dis={'The hottest tracks in the United States'} />
-              <CartShop image={img1} title={'Hot Hits USA'} dis={'The hottest tracks in the United States'} />
-            </Grid>
-            <Grid className={styles.rightSide_TopBox__cart}>
-              <CartShop image={img1} title={'Hot Hits USA'} dis={'The hottest tracks in the United States'} />
-              <CartShop image={img2} title={'Hot Hits USA'} dis={'The hottest tracks in the United States'} />
-              <CartShop image={img1} title={'Hot Hits USA'} dis={'The hottest tracks in the United States'} />
+              {
+                dataMain.map(item => <CartShop image={item.image} title={item.title} dis={item.dis} />)
+              }
             </Grid>
           </Grid>
         </Grid>

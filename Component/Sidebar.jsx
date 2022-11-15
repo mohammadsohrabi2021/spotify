@@ -12,10 +12,11 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Link from 'next/link';
 const Sidebar = () => {
-    return (
-        <Grid>
-              <Drawer variant="permanent" PaperProps={{ sx: { width: "18%", backgroundColor: '#000' }, }}>
+  return (
+    <Grid >
+      <Drawer variant="permanent" PaperProps={{ sx: { width: "20%", backgroundColor: '#000' }, }}>
         <Box sx={{ backgroundColor: '#000', padding: '22px 0 10px 22px' }}>
           <Image
             src={logo}
@@ -27,11 +28,14 @@ const Sidebar = () => {
           <Box sx={{ marginBottom: '30px' }}>
             <ListItem sx={{ display: 'flex', gap: '10px', height: '35px' }}>
               <HomeIcon sx={{ color: '#fff', fontSize: 30 }} />
-              <Typography sx={{ color: '#fff', fontSize: '12px', fontWeight: 'bolder' }}>Home</Typography>
+              <Link href={'/'}>
+                <Typography sx={{ color: '#fff', fontSize: '12px', fontWeight: 'bolder' }}>Home</Typography></Link>
             </ListItem>
             <ListItem sx={{ display: 'flex', gap: '10px', height: '35px' }}>
               <SearchIcon sx={{ color: '#b2b2b2', fontSize: 30 }} />
-              <Typography sx={{ color: '#b2b2b2', fontSize: '12px', fontWeight: 'bolder' }}>Search</Typography>
+              <Link href={'/search'}>
+                <Typography sx={{ color: '#b2b2b2', fontSize: '12px', fontWeight: 'bolder' }}>Search</Typography>
+              </Link>
             </ListItem>
             <ListItem sx={{ display: 'flex', gap: '10px', height: '35px' }}>
               <VideoLibraryIcon sx={{ color: '#b2b2b2' }} />
@@ -50,8 +54,8 @@ const Sidebar = () => {
           </Box>
         </List>
       </Drawer>
-        </Grid>
-    );
+    </Grid>
+  );
 };
 
 export default Sidebar;

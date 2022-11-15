@@ -14,6 +14,7 @@
 
 .rightSide_TopBox__cart{
   display: flex;
+  flex-wrap: wrap;
   margin: 0 0 0 45px;
   gap: 18px;
 }
