@@ -1,7 +1,6 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
-// import Sidebar from "../components/sidebar/sidebar";
+
 import Grid from '@mui/material/Grid';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -14,13 +13,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import Typography from '@mui/material/Typography';
 import AddBoxIcon from '@mui/icons-material/AddBox';
-import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
-// import AppBar from '@mui/material/AppBar';
-// import Toolbar from '@mui/material/Toolbar';
-// import Button from '@mui/material/Button';
-// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-// import IconButton from '@mui/material/IconButton';
+import AddIcon from '@mui/icons-material/Add';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import image1 from '../image/1.png'
 import Cart from '../Component/Cart';
 export default function Home() {
@@ -75,11 +69,11 @@ export default function Home() {
           </Box>
           <Box>
             <ListItem sx={{ display: 'flex', gap: '10px', height: '35px' }}>
-              <AddBoxIcon sx={{ color: '#b2b2b2', fontSize: 30 }} />
+              <AddIcon sx={{ color: '#b2b2b2', fontSize: 30 }} />
               <Typography sx={{ color: '#b2b2b2', fontSize: '12px', fontWeight: 'bolder' }}>Create Playlist</Typography>
             </ListItem>
             <ListItem sx={{ display: 'flex', gap: '10px', height: '35px' }}>
-              <BookmarkAddIcon sx={{ color: '#b2b2b2', fontSize: 30 }} />
+              <FavoriteBorderIcon sx={{ color: '#b2b2b2', fontSize: 30 }} />
               <Typography sx={{ color: '#b2b2b2', fontSize: '12px', fontWeight: 'bolder' }}>Liked Songs</Typography>
             </ListItem>
           </Box>
