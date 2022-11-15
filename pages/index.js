@@ -21,7 +21,6 @@ export default function Home() {
               {
                 data.map(item => <Cart image1={item.image} title={item.title} />)
               }
-
             </Grid>
           </Grid>
           <Grid>
