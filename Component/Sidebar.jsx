@@ -20,7 +20,7 @@ const Sidebar = () => {
       <Drawer
         variant="permanent"
         PaperProps={{
-          sx: { width: "18%", height: "89.1%", backgroundColor: "#000" },
+          sx: { width: "18%", height: "86%", backgroundColor: "#000" },
         }}
       >
         <Box sx={{ padding: "22px 0 10px 22px" }}>
@@ -108,9 +108,9 @@ const Sidebar = () => {
             </ListItem>
           </Box>
           <Box
-            sx={{ position: "fixed", left: "0", right: "0", bottom: "64px" }}
+            sx={{ position: "fixed", left: "0", right: "0", bottom: "80px" }}
           >
-            <Image src={userImage} />
+            <Image src={userImage} width={230} height={200}/>
           </Box>
         </List>
       </Drawer>
