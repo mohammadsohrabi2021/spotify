@@ -1,119 +1,68 @@
-import { Grid } from "@mui/material";
+import {
+  Grid,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import React from "react";
-import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import Box from "@mui/material/Box";
 import Image from "next/image";
 import logo from "../image/spotify-logo.png";
 import userImage from "../image/Rectangle 16.png";
-import HomeIcon from "@mui/icons-material/Home";
-import SearchIcon from "@mui/icons-material/Search";
-import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
-import Typography from "@mui/material/Typography";
-import AddIcon from "@mui/icons-material/Add";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { List1 } from "../Data/dataSidebar";
+import { Playlists } from "../Data/dataSidebar";
 import Link from "next/link";
 const Sidebar = () => {
   return (
-    <Grid>
-      <Drawer
-        variant="permanent"
-        PaperProps={{
-          sx: { width: "18%", height: "86%", backgroundColor: "#000" },
-        }}
-      >
-        <Box sx={{ padding: "22px 0 10px 22px" }}>
-          <Image src={logo} width={120} height={36} />
-        </Box>
-        <List>
-          <Box sx={{ marginBottom: "30px" }}>
-            <ListItem
-              boxShadow={5}
-              bgcolor={"gray"}
-              width={"60px"}
-              sx={{ display: "flex", gap: "10px", height: "35px" }}
-            >
-              <HomeIcon sx={{ color: "#fff", fontSize: 30 }} />
-              <Link href={"/"}>
-                <Typography
-                  sx={{ color: "#fff", fontSize: "12px", fontWeight: "bolder" }}
-                >
-                  Home
-                </Typography>
-              </Link>
-            </ListItem>
-            <ListItem sx={{ display: "flex", gap: "10px", height: "35px" }}>
-              <SearchIcon sx={{ color: "#b2b2b2", fontSize: 30 }} />
-              <Link href={"/search"}>
-                <Typography
-                  sx={{
-                    color: "#b2b2b2",
-                    fontSize: "12px",
-                    fontWeight: "bolder",
-                  }}
-                >
-                  Search
-                </Typography>
-              </Link>
-            </ListItem>
-            <ListItem sx={{ display: "flex", gap: "10px", height: "35px" }}>
-              <VideoLibraryIcon sx={{ color: "#b2b2b2" }} />
-              <Typography
-                sx={{
-                  color: "#b2b2b2",
-                  fontSize: "12px",
-                  fontWeight: "bolder",
-                }}
-              >
-                Your Library
-              </Typography>
-            </ListItem>
-          </Box>
-          <Box>
-            <ListItem>
-              <Typography
-                sx={{
-                  color: "#b2b2b2",
-                  fontSize: "12px",
-                  fontWeight: "bolder",
-                }}
-              >
-                Playlists
-              </Typography>
-            </ListItem>
-            <ListItem sx={{ display: "flex", gap: "10px", height: "35px" }}>
-              <AddIcon sx={{ color: "#b2b2b2", fontSize: 30 }} />
-              <Typography
-                sx={{
-                  color: "#b2b2b2",
-                  fontSize: "12px",
-                  fontWeight: "bolder",
-                }}
-              >
-                Create Playlist
-              </Typography>
-            </ListItem>
-            <ListItem sx={{ display: "flex", gap: "10px", height: "35px" }}>
-              <FavoriteBorderIcon sx={{ color: "#b2b2b2", fontSize: 30 }} />
-              <Typography
-                sx={{
-                  color: "#b2b2b2",
-                  fontSize: "12px",
-                  fontWeight: "bolder",
-                }}
-              >
-                Liked Songs
-              </Typography>
-            </ListItem>
-          </Box>
-          <Box
-            sx={{ position: "fixed", left: "0", right: "0", bottom: "80px" }}
-          >
-            <Image src={userImage} width={230} height={200}/>
-          </Box>
-        </List>
-      </Drawer>
+    <Grid
+      xs={2.6}
+      lg={2}
+      bgcolor={"#000"}
+      width={"100%"}
+      height={"100vh"}
+      sx={{ position: "fixed" }}
+    >
+      <Grid p={"10px 0 0 10px"}>
+        <Image src={logo} width={129} height={39} />
+      </Grid>
+      <List>
+        {List1.map((item) => (
+          <Link href={item.href} key={item.id}>
+            {item.name ? (
+             <Grid boxShadow={10} bgcolor={'#282828'} borderRadius={1}>
+               <ListItemButton >
+                <ListItemIcon sx={{ color: "#B3B3B3" }}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText primary={item.lable} />
+              </ListItemButton>
+             </Grid>
+            ) : (
+              <ListItemButton>
+                <ListItemIcon sx={{ color: "#B3B3B3" }}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText primary={item.lable} />
+              </ListItemButton>
+            )}
+          </Link>
+        ))}
+        <Typography p={2}>{"Playlists"}</Typography>
+        {Playlists.map((item) => (
+          <Link href={item.href} key={item.id}>
+            <ListItemButton>
+              <ListItemIcon sx={{ color: "#B3B3B3" }}>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.lable} />
+            </ListItemButton>
+          </Link>
+        ))}
+      </List>
+      <Grid border={1} mb={2} width={"80%"} ml={2.5} />
+      <Grid>
+        <Image src={userImage} width={220} height={230} />
+      </Grid>
     </Grid>
   );
 };

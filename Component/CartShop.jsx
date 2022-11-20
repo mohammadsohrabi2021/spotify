@@ -4,7 +4,7 @@ import React from 'react';
 
 const CartShop = ({ title, dis, image }) => {
     return (
-        <Grid display={'flex'} justifyContent={'center'} alignItems={'center'} my={2} flexDirection={'column'}  borderRadius={'4px'} bgcolor={'#181818'} width={'20%'}>
+        <Grid display={'flex'} justifyContent={'center'} alignItems={'center'} my={2} flexDirection={'column'}  borderRadius={'4px'} bgcolor={'#181818'} width={'25%'}>
             <Image src={image} width={'158px'} height={'158px'} />
             <Typography my={2} pr={6}>{title}</Typography>
             <Typography pr={1} sx={{

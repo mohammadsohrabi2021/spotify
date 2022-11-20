@@ -17,6 +17,7 @@ import BrandingWatermarkIcon from "@mui/icons-material/BrandingWatermark";
 const Footer = () => {
   return (
     <Grid
+      width={"100%"}
       p={1}
       xs={12}
       container
@@ -27,10 +28,10 @@ const Footer = () => {
       bgcolor={"#181818"}
       sx={{ position: "fixed", left: "0", right: "0", bottom: "0" }}
     >
-      <Grid item xs={1.5}>
+      <Grid item xs={2} lg={1.5}>
         <Image src={imageFooter} alt={"imageFooter"} />
       </Grid>
-      <Grid item xs={1.5} display={"flex"}>
+      <Grid item xs={2} display={"flex"}>
         <Typography
           sx={{
             fontSize: "15px",
@@ -62,7 +63,7 @@ const Footer = () => {
           <BrandingWatermarkIcon />
         </Typography>
       </Grid>
-      <Grid >
+      <Grid xs={5} lg={6.4}>
         <Grid
           my={1}
           display={"flex"}
@@ -82,13 +83,14 @@ const Footer = () => {
             <Image src={Vector2} alt={"Vector2"} />
           </Grid>
         </Grid>
-        <Grid display={"flex"} alignItems={"center"} gap={1}>
+        <Grid display={"flex"} alignItems={"center"} gap={1} width={"3000px"}>
           <Typography>{"0:00"}</Typography>
-          <Image src={image} />
+          {/* <Image src={image} /> */}
+          <Grid border={2} borderRadius={5} width={{ xs: "12%", lg: "22%" }} />
           <Typography>{"2:50"}</Typography>
         </Grid>
       </Grid>
-      <Grid  display={"flex"} alignItems={"center"} gap={1}pl={7}>
+      <Grid xs={3} lg={2} display={"flex"} alignItems={"center"} gap={1} pl={7}>
         <PlaylistPlayIcon />
         <ZoomOutMapIcon />
         <Image src={Vector3} alt="Vector3" />
