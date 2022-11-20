@@ -3,12 +3,16 @@ import Image from "next/image";
 import React from "react";
 import imageFooter from "../image/Rectangle 9.png";
 import image from "../image/Rectangle15.png";
-import Vector2 from '../image/image/btn/Vector@2x.png'
-import SkipNextIcon from '@mui/icons-material/SkipNext';
-import Vector1 from '../image/image/btn/Vector.svg'
-import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import Vector2 from "../image/image/btn/Vector@2x.png";
+import SkipNextIcon from "@mui/icons-material/SkipNext";
+import Vector1 from "../image/image/btn/Vector.svg";
+import Vector3 from "../image/Spotify Desktop App Clone (Community)/Vector.png";
+import Rectangle14 from "../image/Rectangle 14.png";
+import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
+import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
+import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
 import BrandingWatermarkIcon from "@mui/icons-material/BrandingWatermark";
 const Footer = () => {
   return (
@@ -58,21 +62,37 @@ const Footer = () => {
           <BrandingWatermarkIcon />
         </Typography>
       </Grid>
-      <Grid>
-        <Grid my={1} display={"flex"} alignItems={"center"} justifyContent={'center'}>
-           <Grid width={"50%"}  display={"flex"} alignItems={"center"} justifyContent={'space-evenly'}>
-           <Image src={Vector1} alt={'Vector1'}/>
-            <SkipPreviousIcon/>
-            <PlayCircleIcon/>
-            <SkipNextIcon/>
-            <Image src={Vector2} alt={'Vector2'}/>
-           </Grid>
+      <Grid >
+        <Grid
+          my={1}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
+          <Grid
+            width={"50%"}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"space-evenly"}
+          >
+            <Image src={Vector1} alt={"Vector1"} />
+            <SkipPreviousIcon />
+            <PlayCircleIcon />
+            <SkipNextIcon />
+            <Image src={Vector2} alt={"Vector2"} />
+          </Grid>
         </Grid>
-        <Grid  display={"flex"} alignItems={"center"} gap={1}>
+        <Grid display={"flex"} alignItems={"center"} gap={1}>
           <Typography>{"0:00"}</Typography>
           <Image src={image} />
           <Typography>{"2:50"}</Typography>
         </Grid>
+      </Grid>
+      <Grid  display={"flex"} alignItems={"center"} gap={1}pl={7}>
+        <PlaylistPlayIcon />
+        <ZoomOutMapIcon />
+        <Image src={Vector3} alt="Vector3" />
+        <Image src={Rectangle14} alt="Rectangle14" />
       </Grid>
     </Grid>
   );
