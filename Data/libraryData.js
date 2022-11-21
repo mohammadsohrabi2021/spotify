@@ -17,8 +17,8 @@ export const DataTable =[
     {id:7,image:img6,name:'Dua Lipa',title:'We’re Good',dis:'Future Nostalgia (The Moonlight Edition)',date:'4일 전',time:'2:45',icon:icon},
 ]
 export const TableTitle=[
-    {name:'#TITLE'},
-    {name:'ALBUM',align:'center'},
-    {name:'DATAADED',align:'right'},
-    {name:<AvTimerIcon />,align:'right'},
+    {id:1,name:'#TITLE'},
+    {id:2,name:'ALBUM',align:'center'},
+    {id:3,name:'DATAADED',align:'right'},
+    {id:4,name:<AvTimerIcon />,align:'right'},
 ]

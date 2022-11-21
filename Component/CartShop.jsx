@@ -8,7 +8,7 @@ const CartShop = ({ title, dis, image }) => {
           <Card sx={{maxWidth: "200px",minHeight: "300px",bgcolor: "#181818",color: "#fff",mt: "10px",}}>
             <CardActionArea >
               <Grid display={"flex"} alignItems={"center"} ml={2} mt={3} justifyContent={"center"} width={"158px"} height={"158px"} >
-                <Image src={image} />
+                <Image src={image}alt="image" />
               </Grid>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div" mt={5}>

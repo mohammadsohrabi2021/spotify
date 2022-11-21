@@ -31,7 +31,7 @@ const Sidebar = () => {
           justifyContent={"flex-start"}
           display={"flex"}
         >
-          <Image src={logo} width={129} height={39}/>
+          <Image src={logo} width={129} height={39} alt="logo"/>
         </Grid>
         <List
           sx={{ width: "100%", maxWidth: 360, color: "#B3B3B3" }}
@@ -74,7 +74,7 @@ const Sidebar = () => {
         display={"flex"}
         xs={12}
       >
-        <Image src={userImage} />
+        <Image src={userImage} alt="user"/>
       </Grid>
       {/* <Grid p={"10px 0 0 10px"}>
         <Image src={logo} width={129} height={39} />

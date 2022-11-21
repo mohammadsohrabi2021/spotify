@@ -29,7 +29,7 @@ const Footer = () => {
       sx={{ position: "fixed", left: "0", right: "0", bottom: "0" }}
     >
       <Grid item xs={2} lg={1.5}>
-        <Image src={imageFooter} alt={"imageFooter"} />
+        <Image src={imageFooter} alt="imageFooter" />
       </Grid>
       <Grid item xs={2} display={"flex"}>
         <Typography
@@ -76,11 +76,11 @@ const Footer = () => {
             alignItems={"center"}
             justifyContent={"space-evenly"}
           >
-            <Image src={Vector1} alt={"Vector1"} />
+            <Image src={Vector1} alt="Vector1" />
             <SkipPreviousIcon />
             <PlayCircleIcon />
             <SkipNextIcon />
-            <Image src={Vector2} alt={"Vector2"} />
+            <Image src={Vector2} alt="Vector2" />
           </Grid>
         </Grid>
         <Grid display={"flex"} alignItems={"center"} gap={1} width={"3000px"}>

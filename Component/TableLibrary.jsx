@@ -12,7 +12,7 @@ const TableLibrary = ({id,title,name,image,dis,time,date,icon}) => {
       <TableCell component="th" scope="row">
         <Grid color={'#fff'} display={"flex"} sx={{cursor:"pointer"}} alignItems={"center"}>
           <Typography mr={2}>{id}</Typography>
-          <Image src={image} width={40} height={40}/>
+          <Image src={image} width={40} height={40}alt="icon image"/>
           <Grid  ml={2}>
             <Typography>{name}</Typography>
             <Typography>{title}</Typography>
@@ -29,7 +29,7 @@ const TableLibrary = ({id,title,name,image,dis,time,date,icon}) => {
       <TableCell  align="right">
         <Grid color={'#fff'} display={"flex"} justifyContent={"flex-end"} alignItems={'center'}>
           <Typography>{time}</Typography>
-          <Image src={icon}/>
+          <Image src={icon}alt="icon"/>
         </Grid>
       </TableCell>
     </TableRow>

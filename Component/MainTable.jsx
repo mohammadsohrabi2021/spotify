@@ -21,7 +21,7 @@ const MainTable = () => {
           <TableHead>
             <TableRow>
               {TableTitle.map((item) => (
-                <TableCell align={item.align}>
+                <TableCell key={item.id} align={item.align}>
                   <Typography color={"#fff"}>{item.name}</Typography>
                 </TableCell>
               ))}
@@ -29,7 +29,7 @@ const MainTable = () => {
           </TableHead>
           <TableBody>
             {DataTable.map((item) => (
-              <TableLibrary
+              <TableLibrary key={item.id}
                 id={item.id}
                 title={item.title}
                 image={item.image}

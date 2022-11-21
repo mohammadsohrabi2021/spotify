@@ -12,7 +12,7 @@ import Image from "next/image";
 const CardLibrary = () => {
   return (
     <Card  sx={{ display: "flex", bgcolor: "#7B958F" }}>
-      <Image src={user} />
+      <Image src={user} alt="icon user"/>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
           <Typography mt={6} variant="h6" color={'#fff'}>
@@ -50,7 +50,7 @@ const CardLibrary = () => {
               opacity: 0.7,
             }}
           >
-            <Typography
+            <span
               sx={{
                 width: "49px",
                 height: "22px",
@@ -62,7 +62,7 @@ const CardLibrary = () => {
               }}
             >
               Spotify
-            </Typography>
+            </span>
             860,305 likes 100 songs, 5 hr 5 min
           </Typography>
         </CardContent>
