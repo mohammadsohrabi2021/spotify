@@ -1,20 +1,27 @@
-import { Grid, Typography } from '@mui/material';
+import { Card, CardActionArea, CardContent, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 
 const CartShop = ({ title, dis, image }) => {
     return (
-        <Grid display={'flex'} justifyContent={'center'} alignItems={'center'} my={2} flexDirection={'column'}  borderRadius={'4px'} bgcolor={'#181818'} width={'25%'}>
-            <Image src={image} width={'158px'} height={'158px'} />
-            <Typography my={2} pr={6}>{title}</Typography>
-            <Typography pr={1} sx={{
-                fontSize: '14px',
-                fontWeight: 400,
-                lineHeight: '16px',
-                color: '#B3B3B3',
-                width: '70%'
-            }}>{dis}</Typography>
-        </Grid>
+ 
+          <Card sx={{maxWidth: "200px",minHeight: "300px",bgcolor: "#181818",color: "#fff",mt: "10px",}}>
+            <CardActionArea >
+              <Grid display={"flex"} alignItems={"center"} ml={2} mt={3} justifyContent={"center"} width={"158px"} height={"158px"} >
+                <Image src={image} />
+              </Grid>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div" mt={5}>
+                  {title}
+                </Typography>
+                <Typography variant="body2" color="#FFF" width={'80%'}>
+                  {dis}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+       
+      
     );
 };
 

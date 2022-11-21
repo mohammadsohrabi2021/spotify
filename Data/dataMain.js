@@ -12,7 +12,7 @@ import img11 from '../image/Rectangle1.png'
 import img12 from '../image/Ellipse 1.png'
 import img13 from '../image/Ellipse 3.png'
 import img14 from '../image/Ellipse 2.png'
-const dataMain =[
+export const list1 =[
     {image:img1,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
     {image:img2,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
     {image:img3,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
@@ -20,6 +20,8 @@ const dataMain =[
     {image:img5,title:'Destiny Rogers',dis:'Artist'},
     {image:img6,title:'Destiny Rogers',dis:'Artist'},
     {image:img7,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
+]
+export const list2=[
     {image:img8,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
     {image:img9,title:'Pop Right Now',dis:'Artist'},
     {image:img10,title:'Destiny Rogers',dis:'The hottest tracks in the United States'},
@@ -28,4 +30,3 @@ const dataMain =[
     {image:img13,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
     {image:img14,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
 ]
-export default dataMain

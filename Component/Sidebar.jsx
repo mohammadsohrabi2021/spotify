@@ -17,14 +17,66 @@ import Link from "next/link";
 const Sidebar = () => {
   return (
     <Grid
-      xs={2.6}
-      lg={2}
-      bgcolor={"#000"}
-      width={"100%"}
-      height={"100vh"}
-      sx={{ position: "fixed" }}
+    container
+    xs={2.7}
+    lg={2}
+    bgcolor={"black"}
+    minWidth={200}
+    height={"100vh"}
+    position={"fixed"}
     >
-      <Grid p={"10px 0 0 10px"}>
+         <Grid item md={12} sx={{ backgroundColor: "#000" }}>
+        <Grid
+          sx={{ mt: 4, bgcolor: "#000" }}
+          justifyContent={"flex-start"}
+          display={"flex"}
+        >
+          <Image src={logo} width={129} height={39}/>
+        </Grid>
+        <List
+          sx={{ width: "100%", maxWidth: 360, color: "#B3B3B3" }}
+          aria-label="contacts"
+        >
+   {List1.map((item) => (
+          <Link href={item.href} key={item.id}>
+            {item.name ? (
+             <Grid boxShadow={10} bgcolor={'#282828'} borderRadius={1}>
+               <ListItemButton >
+                <ListItemIcon sx={{ color: "#B3B3B3" }}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText primary={item.lable} />
+              </ListItemButton>
+             </Grid>
+            ) : (
+              <ListItemButton>
+                <ListItemIcon sx={{ color: "#B3B3B3" }}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText primary={item.lable} />
+              </ListItemButton>
+            )}
+          </Link>
+        ))}
+        <Typography p={2}>{"Playlists"}</Typography>
+        {Playlists.map((item) => (
+          <Link href={item.href} key={item.id}>
+            <ListItemButton>
+              <ListItemIcon sx={{ color: "#B3B3B3" }}>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.lable} />
+            </ListItemButton>
+          </Link>
+        ))}
+      </List>
+      </Grid>
+      <Grid
+        justifyContent={"center"}
+        display={"flex"}
+        xs={12}
+      >
+        <Image src={userImage} />
+      </Grid>
+      {/* <Grid p={"10px 0 0 10px"}>
         <Image src={logo} width={129} height={39} />
       </Grid>
       <List>
@@ -62,7 +114,7 @@ const Sidebar = () => {
       <Grid border={1} mb={2} width={"80%"} ml={2.5} />
       <Grid>
         <Image src={userImage} width={220} height={230} />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
