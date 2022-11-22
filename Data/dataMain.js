@@ -13,20 +13,20 @@ import img12 from '../image/Ellipse 1.png'
 import img13 from '../image/Ellipse 3.png'
 import img14 from '../image/Ellipse 2.png'
 export const list1 =[
-    {image:img1,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
-    {image:img2,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
-    {image:img3,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
-    {image:img4,title:'Destiny Rogers',dis:'Artist'},
-    {image:img5,title:'Destiny Rogers',dis:'Artist'},
-    {image:img6,title:'Destiny Rogers',dis:'Artist'},
-    {image:img7,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
+    {id:1,image:img1,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
+    {id:2,image:img2,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
+    {id:3,image:img3,title:'Hot Hits USA',dis:'The hottest tracks in the United States'},
+    {id:4,image:img4,title:'Destiny Rogers',dis:'Artist'},
+    {id:5,image:img5,title:'Destiny Rogers',dis:'Artist'},
+    {id:6,image:img6,title:'Destiny Rogers',dis:'Artist'},
+    {id:7,image:img7,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
 ]
 export const list2=[
-    {image:img8,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
-    {image:img9,title:'Pop Right Now',dis:'Artist'},
-    {image:img10,title:'Destiny Rogers',dis:'The hottest tracks in the United States'},
-    {image:img11,title:'Destiny Rogers',dis:'Artist'},
-    {image:img12,title:'Destiny Rogers',dis:'The hottest tracks in the United States'},
-    {image:img13,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
-    {image:img14,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
+    {id:1,image:img8,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
+    {id:2,image:img9,title:'Pop Right Now',dis:'Artist'},
+    {id:3,image:img10,title:'Destiny Rogers',dis:'The hottest tracks in the United States'},
+    {id:4,image:img11,title:'Destiny Rogers',dis:'Artist'},
+    {id:5,image:img12,title:'Destiny Rogers',dis:'The hottest tracks in the United States'},
+    {id:6,image:img13,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
+    {id:7,image:img14,title:'Pop Right Now',dis:'The hottest tracks in the United States'},
 ]

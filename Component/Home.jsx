@@ -13,7 +13,7 @@ const Home = () => {
         <Typography variant="h2">{"Good afternoon"}</Typography>
         <Grid item className={styles.rightSide_TopBox__cart}>
           {data.map((item) => (
-            <Cart image1={item.image} title={item.title} />
+            <Cart key={item.id} image1={item.image} title={item.title} />
           ))}
         </Grid>
         <Grid p={3}mt={2} item color={"#fff"}>
@@ -22,13 +22,13 @@ const Home = () => {
         
       <Grid pl={3} mr={10} item display={"flex"} flexWrap={"wrap"} justifyContent={"space-between"} >
         {list1.map((item) => (
-            <CartShop image={item.image} title={item.title} dis={item.dis} />
+            <CartShop key={item.id} image={item.image} title={item.title} dis={item.dis} />
           ))}
         </Grid>
         <Typography variant="h2">{"Just the Hits"}</Typography>
         <Grid pl={3} mr={10} mb={5} item display={"flex"} flexWrap={"wrap"} justifyContent={"space-between"} >
           {list2.map((item) => (
-            <CartShop image={item.image} title={item.title} dis={item.dis} />
+            <CartShop key={item.id} image={item.image} title={item.title} dis={item.dis} />
           ))}
         </Grid>
       </Grid>
