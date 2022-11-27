@@ -17,6 +17,7 @@ import BrandingWatermarkIcon from "@mui/icons-material/BrandingWatermark";
 const Footer = () => {
   return (
     <Grid
+    item
       width={"100%"}
       p={1}
       xs={12}
@@ -86,7 +87,7 @@ const Footer = () => {
         <Grid display={"flex"} alignItems={"center"} gap={1} width={"3000px"}>
           <Typography>{"0:00"}</Typography>
           {/* <Image src={image} /> */}
-          <Grid border={2} borderRadius={5} item width={{ xs: "12%", lg: "22%" }} />
+          <Grid  border={2} borderRadius={5} item width={{ xs: "12%", lg: "22%" }} />
           <Typography>{"2:50"}</Typography>
         </Grid>
       </Grid>
