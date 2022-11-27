@@ -7,16 +7,23 @@ import Sidebar from "../Component/Sidebar";
 import styles from "../styles/Home.module.css";
 const library = () => {
   return (
-    <Grid xs={12} container>
-      <Grid item xs={12} display={"flex"} justifyContent={"space-between"}>
+    <Grid item xs={12} container>
+      <Grid
+        item
+        container
+        xs={12}
+        display={"flex"}
+        justifyContent={"space-between"}
+      >
         <Sidebar />
         <Grid
+          item
           width={"100%"}
           ml={{ xs: "25%", lg: "17%" }}
           className={styles.rightSide_TopBox}
         >
           <CardLibrary />
-          <MainTable/>
+          <MainTable />
         </Grid>
       </Grid>
       <Grid item sx={{ position: "relative" }}>

@@ -63,7 +63,7 @@ const Footer = () => {
           <BrandingWatermarkIcon />
         </Typography>
       </Grid>
-      <Grid xs={5} lg={6.4}>
+      <Grid item xs={5} lg={6.4}>
         <Grid
           my={1}
           display={"flex"}
@@ -86,11 +86,11 @@ const Footer = () => {
         <Grid display={"flex"} alignItems={"center"} gap={1} width={"3000px"}>
           <Typography>{"0:00"}</Typography>
           {/* <Image src={image} /> */}
-          <Grid border={2} borderRadius={5} width={{ xs: "12%", lg: "22%" }} />
+          <Grid border={2} borderRadius={5} item width={{ xs: "12%", lg: "22%" }} />
           <Typography>{"2:50"}</Typography>
         </Grid>
       </Grid>
-      <Grid xs={3} lg={2} display={"flex"} alignItems={"center"} gap={1} pl={7}>
+      <Grid item xs={3} lg={2} display={"flex"} alignItems={"center"} gap={1} pl={7}>
         <PlaylistPlayIcon />
         <ZoomOutMapIcon />
         <Image src={Vector3} alt="Vector3" />

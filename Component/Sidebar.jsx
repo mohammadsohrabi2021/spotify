@@ -18,6 +18,7 @@ const Sidebar = () => {
   return (
     <Grid
     container
+    item
     xs={2.7}
     lg={2}
     bgcolor={"black"}
@@ -70,6 +71,7 @@ const Sidebar = () => {
       </List>
       </Grid>
       <Grid
+      item
         justifyContent={"center"}
         display={"flex"}
         xs={12}

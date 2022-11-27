@@ -7,10 +7,10 @@ import styles from "../styles/Home.module.css";
 
 const search = () => {
   return (
-    <Grid xs={12} container>
-      <Grid item xs={12} display={"flex"} justifyContent={"space-between"}>
+    <Grid item xs={12} container>
+      <Grid item container xs={12} display={"flex"} justifyContent={"space-between"}>
         <Sidebar />
-        <Grid ml={{ xs: "25%", lg: "17%" }}  p={10} className={styles.rightSide_TopBox} xs={10}>Search Page</Grid>
+        <Grid item ml={{ xs: "25%", lg: "17%" }}  p={10} className={styles.rightSide_TopBox} xs={10}>Search Page</Grid>
       </Grid>
       <Grid item sx={{ position: "relative" }}>
         <Footer />
